@@ -1,0 +1,267 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow: hidden;
+}
+
+.container {
+  background-color: #100f0b;
+  height: 100dvh;
+  width: 100dvw;
+  padding: 1em 3rem;
+  display: grid;
+  grid-template-rows: 8% 90%;
+  gap: 2%;
+}
+
+header {
+  /* height: 8%; */
+  background-color: #ffffff4c;
+  border-radius: 12px;
+  position: relative;
+  animation: slideDownMenu 2s ease forwards;
+}
+
+main {
+  /* height: 90%; */
+  border-radius: 16px;
+  background-image: url("https://cdn.pixabay.com/photo/2016/08/26/15/06/home-1622401_1280.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+main .card-top {
+  display: flex;
+  height: 40%;
+}
+
+main .card-top .card-top-one {
+  height: 100%;
+  width: 30%;
+  /* display: inline; */
+  justify-content: start;
+  background-color: #100f0b;
+  border-bottom-right-radius: 12px;
+  display: flex;
+  align-items: start;
+}
+
+main .card-top .card-top-one img {
+  height: 95.6%;
+  width: 97%;
+  border-radius: 12px;
+  animation: slideRigthCardTopOne 2s ease forwards;
+}
+
+main .card-top .card-top-one::before {
+  content: "";
+  height: 15px;
+  width: 15px;
+  background-color: transparent;
+  position: absolute;
+  left: 2.96rem;
+  top: 46%;
+  border-radius: 50%;
+  box-shadow: -3px -3px #100f0b;
+}
+
+main .card-top .card-top-two {
+  height: 70%;
+  width: 30%;
+  /* display: inline; */
+  background-color: #100f0b;
+  border-bottom-right-radius: 16px;
+  position: relative;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+}
+
+main .card-top .card-top-two img {
+  width: 96%;
+  height: 93%;
+  border-radius: 12px;
+  animation: slideRigthCardTopTwo 2s ease forwards;
+}
+
+main p {
+  text-align: center;
+  font-size: 10rem;
+  color: rgb(255, 255, 255);
+}
+
+main .card-bottom {
+  height: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+
+main .card-bottom .card-bottom-left {
+  width: 30%;
+  height: 100%;
+  display: grid;
+  align-items: end;
+}
+
+main .card-bottom .card-bottom-left .card-bottom-left-card-container {
+  background-color: #100f0b;
+  height: 40%;
+  border-radius: 12px;
+  display: flex;
+  align-items: end;
+}
+
+main
+  .card-bottom
+  .card-bottom-left
+  .card-bottom-left-card-container
+  .card-bottom-left-card {
+  background-color: white;
+  height: 90%;
+  width: 96.5%;
+  border-radius: 12px;
+  background-image: url("https://cdn.pixabay.com/photo/2016/08/26/15/06/home-1622401_1280.jpg");
+  animation: slideRightCardBottomLeftCard 2s ease forwards;
+}
+
+main .card-bottom .card-bottom-rigth {
+  background-color: #100f0b;
+  border-radius: 12px;
+  width: 45%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: end;
+}
+
+main .card-bottom .card-bottom-rigth .card-bottom-right-card {
+  background-color: white;
+  height: 95%;
+  width: 47%;
+  border-radius: 12px;
+  background-image: url("https://cdn.pixabay.com/photo/2016/08/26/15/06/home-1622401_1280.jpg");
+}
+
+main .card-bottom .card-bottom-rigth .card-bottom-right-card.one {
+  animation: slideTopCardBottomRightCard 2s ease forwards;
+}
+
+main .card-bottom .card-bottom-rigth .card-bottom-right-card.two {
+  animation: slideLeftCardBottomRightCard 2s ease forwards;
+}
+
+.layout {
+  position: absolute;
+  top: 1rem + 8%;
+  left: 3rem;
+  height: 87.3%;
+  width: 94.3%; 
+  border-radius: 12px;
+  display: grid;
+  grid-template-rows: 50% 50%;
+}
+
+.layout-top {
+  background-color: #100f0b;
+  animation: layoutTopAnimation ease 2s forwards;
+  transform-origin: top; 
+  overflow: hidden;
+}
+
+.layout-bottom {
+  background-color: #100f0b;
+  animation: layoutBottomAnimation ease 2s forwards;
+  transform-origin: bottom; 
+  overflow: hidden;
+}
+
+@keyframes slideDownMenu {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideRigthCardTopOne {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideRigthCardTopTwo {
+  from {
+    transform: translatey(-100%);
+    opacity: 1;
+  }
+  to {
+    transform: translatey(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideRightCardBottomLeftCard {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideLeftCardBottomRightCard {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideTopCardBottomRightCard {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes layoutTopAnimation {
+  from {
+    transform: scaleY(1);
+  }
+  to {
+    transform: scaleY(0);
+  }
+}
+
+@keyframes layoutBottomAnimation {
+  from {
+    transform: scaleY(1);
+  }
+  to {
+    transform: scaleY(0);
+  }
+}

@@ -2,9 +2,11 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: monospace;
 }
+
 body {
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .container {
@@ -19,10 +21,76 @@ body {
 
 header {
   /* height: 8%; */
-  background-color: #ffffff4c;
+  /* background-color: #ffffff4c; */
   border-radius: 12px;
   position: relative;
   animation: slideDownMenu 2s ease forwards;
+  display: grid;
+  grid-template-columns: 35% 50%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  /* border: 1px solid red; */
+  font-size: 2rem;
+  color: white;
+}
+
+header nav {
+  /* border: 1px solid red; */
+  display: grid;
+  height: 100%;
+  grid-template-columns: 72% 25%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav menu {
+  height: 70%;
+  background-color: #ffffff4c;
+  border-radius: 24px;
+  padding: 0 3rem;
+}
+
+header nav menu ul {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  color: white;
+  font-size: 1.3rem;
+}
+
+header nav .cta {
+  height: 70%;
+  background-color: #ffffff4c;
+  border-radius: 24px;
+  display: grid;
+  grid-template-columns: 68% 26%;
+  padding: 0 0.3rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header nav .cta .cta-title {
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.3rem;
+}
+
+header nav .cta .cta-icon {
+  height: 90%;
+  background-color: #100f0b;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }
 
 main {
@@ -34,6 +102,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  animation: zoomOutBackground 2s ease-out forwards;
 }
 
 main .card-top {
@@ -85,6 +154,30 @@ main .card-top .card-top-two {
   align-items: start;
 }
 
+main .card-top .card-top-two::before {
+  content: "";
+  position: absolute;
+  left: -2px;
+  height: 20px;
+  bottom: -18px;
+  width: 20px;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: -3px -3px #100f0b;
+}
+
+main .card-top .card-top-two::after {
+  content: "";
+  position: absolute;
+  right: -18px;
+  height: 20px;
+  top: -2px;
+  width: 20px;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: -3px -3px #100f0b;
+}
+
 main .card-top .card-top-two img {
   width: 96%;
   height: 93%;
@@ -94,7 +187,6 @@ main .card-top .card-top-two img {
 
 main p {
   text-align: center;
-  font-size: 10rem;
   color: rgb(255, 255, 255);
 }
 
@@ -117,6 +209,31 @@ main .card-bottom .card-bottom-left .card-bottom-left-card-container {
   border-radius: 12px;
   display: flex;
   align-items: end;
+  position: relative;
+}
+
+main .card-bottom .card-bottom-left .card-bottom-left-card-container::before {
+  content: "";
+  height: 20px;
+  width: 20px;
+  background-color: transparent;
+  position: absolute;
+  top: -20px;
+  left: 1px;
+  border-radius: 50%;
+  box-shadow: -12px 12px #100f0b;
+}
+
+main .card-bottom .card-bottom-left .card-bottom-left-card-container::after {
+  content: "";
+  height: 20px;
+  width: 20px;
+  background-color: transparent;
+  position: absolute;
+  bottom: -0.3px;
+  right: -20px;
+  border-radius: 50%;
+  box-shadow: -12px 10px #100f0b;
 }
 
 main
@@ -128,8 +245,37 @@ main
   height: 90%;
   width: 96.5%;
   border-radius: 12px;
-  background-image: url("https://cdn.pixabay.com/photo/2016/08/26/15/06/home-1622401_1280.jpg");
   animation: slideRightCardBottomLeftCard 2s ease forwards;
+  display: grid;
+  grid-template-columns: 30% 68%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+
+}
+
+main
+  .card-bottom
+  .card-bottom-left
+  .card-bottom-left-card-container
+  .card-bottom-left-card
+  .card-bottom-left-card-image {
+  height: 95%;
+  background-image: url("https://cdn.pixabay.com/photo/2016/08/26/15/06/home-1622401_1280.jpg");
+  background-size: cover;
+  border-radius: 8px;
+}
+
+main
+  .card-bottom
+  .card-bottom-left
+  .card-bottom-left-card-container
+  .card-bottom-left-card
+  .card-bottom-left-card-info {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+
+
 }
 
 main .card-bottom .card-bottom-rigth {
@@ -139,6 +285,30 @@ main .card-bottom .card-bottom-rigth {
   display: flex;
   justify-content: space-evenly;
   align-items: end;
+  position: relative;
+}
+
+main .card-bottom .card-bottom-rigth::before {
+  content: "";
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: transparent;
+  position: absolute;
+  left: -19px;
+  box-shadow: 12px 12px #100f0b;
+}
+
+main .card-bottom .card-bottom-rigth::after {
+  content: "";
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background-color: transparent;
+  position: absolute;
+  right: 0.5px;
+  top: -25px;
+  box-shadow: 12px 12px #100f0b;
 }
 
 main .card-bottom .card-bottom-rigth .card-bottom-right-card {
@@ -146,7 +316,7 @@ main .card-bottom .card-bottom-rigth .card-bottom-right-card {
   height: 95%;
   width: 47%;
   border-radius: 12px;
-  background-image: url("https://cdn.pixabay.com/photo/2016/08/26/15/06/home-1622401_1280.jpg");
+  /* background-image: url("https://cdn.pixabay.com/photo/2016/08/26/15/06/home-1622401_1280.jpg"); */
 }
 
 main .card-bottom .card-bottom-rigth .card-bottom-right-card.one {
@@ -161,25 +331,26 @@ main .card-bottom .card-bottom-rigth .card-bottom-right-card.two {
   position: absolute;
   top: 1rem + 8%;
   left: 3rem;
-  height: 87.3%;
-  width: 94.3%; 
+  height: 87.9%;
+  width: 97%;
   border-radius: 12px;
   display: grid;
+  /* border: 1px solid red; */
   grid-template-rows: 50% 50%;
 }
 
 .layout-top {
   background-color: #100f0b;
   animation: layoutTopAnimation ease 2s forwards;
-  transform-origin: top; 
-  overflow: hidden;
+  transform-origin: top;
+  /* overflow: hidden; */
 }
 
 .layout-bottom {
   background-color: #100f0b;
   animation: layoutBottomAnimation ease 2s forwards;
-  transform-origin: bottom; 
-  overflow: hidden;
+  transform-origin: bottom;
+  /* overflow: hidden; */
 }
 
 @keyframes slideDownMenu {
@@ -263,5 +434,16 @@ main .card-bottom .card-bottom-rigth .card-bottom-right-card.two {
   }
   to {
     transform: scaleY(0);
+  }
+}
+
+@keyframes zoomOutBackground {
+  from {
+    background-size: 120%;
+    font-size: 15rem;
+  }
+  to {
+    background-size: 100%;
+    font-size: 10rem;
   }
 }

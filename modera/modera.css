@@ -2,7 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: monospace;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 body {
@@ -251,7 +251,6 @@ main
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-
 }
 
 main
@@ -272,10 +271,8 @@ main
   .card-bottom-left-card-container
   .card-bottom-left-card
   .card-bottom-left-card-info {
-    font-size: 1.5rem;
-    line-height: 2.5rem;
-
-
+  font-size: 1.5rem;
+  line-height: 2.5rem;
 }
 
 main .card-bottom .card-bottom-rigth {
@@ -283,7 +280,7 @@ main .card-bottom .card-bottom-rigth {
   border-radius: 12px;
   width: 45%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: end;
   position: relative;
 }
@@ -311,20 +308,170 @@ main .card-bottom .card-bottom-rigth::after {
   box-shadow: 12px 12px #100f0b;
 }
 
-main .card-bottom .card-bottom-rigth .card-bottom-right-card {
+main .card-bottom .card-bottom-rigth .card-bottom-right-card-one {
+  margin-left: 2.5%;
   background-color: white;
   height: 95%;
   width: 47%;
   border-radius: 12px;
   /* background-image: url("https://cdn.pixabay.com/photo/2016/08/26/15/06/home-1622401_1280.jpg"); */
-}
-
-main .card-bottom .card-bottom-rigth .card-bottom-right-card.one {
+  padding: 1rem;
   animation: slideTopCardBottomRightCard 2s ease forwards;
+  display: grid;
+  grid-template-rows: 28% auto;
+  gap: 5%;
 }
 
-main .card-bottom .card-bottom-rigth .card-bottom-right-card.two {
+main .card-bottom .card-bottom-rigth .card-bottom-right-card-one .card-one-top {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 77% auto;
+  align-items: center;
+  gap: 2%;
+}
+
+main .card-bottom .card-bottom-rigth .card-bottom-right-card-one .card-one-top .card-one-top-title {
+  color: #100f0b;
+  font-size: 2rem;
+  text-align: start;
+
+}
+
+main .card-bottom .card-bottom-rigth .card-bottom-right-card-one .card-one-top .card-one-top-button {
+  color: #100f0b;
+  font-size: 2rem;
+  font-weight: lighter;
+  background-color: white;
+  border: 1px solid;
+  height: 85%;
+  border-radius: 50%;
+
+}
+
+main
+  .card-bottom
+  .card-bottom-rigth
+  .card-bottom-right-card-one
+  .card-one-bottom {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+main
+  .card-bottom
+  .card-bottom-rigth
+  .card-bottom-right-card-one
+  .card-one-bottom img{
+    width: 100%;
+    height: 100%;
+  }
+
+main .card-bottom .card-bottom-rigth .card-bottom-right-card-two {
+  background-color: white;
+  height: 95%;
+  width: 47%;
+  border-radius: 12px;
+  padding: 1rem;
   animation: slideLeftCardBottomRightCard 2s ease forwards;
+  display: grid;
+  grid-template-rows: 28% auto;
+  gap: 5%;
+}
+
+main .card-bottom .card-bottom-rigth .card-bottom-right-card-two .card-two-top {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 77% auto;
+  align-items: center;
+  gap: 2%;
+}
+
+main .card-bottom .card-bottom-rigth .card-bottom-right-card-two .card-two-top .card-two-top-title {
+  color: #100f0b;
+  font-size: 3rem;
+  font-weight: 200 !important;
+  text-align: center;
+
+}
+
+main .card-bottom .card-bottom-rigth .card-bottom-right-card-two .card-two-top .card-two-top-button {
+  color: #100f0b;
+  font-size: 2rem;
+  font-weight: lighter;
+  background-color: white;
+  border: 1px solid;
+  height: 85%;
+  border-radius: 50%;
+
+}
+
+main .card-bottom .card-bottom-rigth .card-bottom-right-card-two .card-two-bottom {
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: 45% auto;
+  gap: 2%;
+  width: 100%;
+}
+
+main .card-bottom .card-bottom-rigth .card-bottom-right-card-two .card-two-bottom .card-two-bottom-description{
+  /* border: 1px solid; */
+  width: 100%;
+  font-size: 1rem;
+  line-height: 18px;
+}
+
+main .card-bottom .card-bottom-rigth .card-bottom-right-card-two .card-two-bottom .card-two-bottom-teams{
+  display: grid;
+  grid-template-columns: 45% auto;
+  align-items: center;
+}
+
+main .card-bottom .card-bottom-rigth .card-bottom-right-card-two .card-two-bottom .card-two-bottom-teams .card-two-bottom-teams-images{
+  display: flex;
+  height: 100px;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+main .card-bottom .card-bottom-rigth .card-bottom-right-card-two .card-two-bottom .card-two-bottom-teams .card-two-bottom-teams-images .image{
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-image: url('https://cdn.pixabay.com/photo/2016/07/01/12/56/vietnamese-people-1491026_640.jpg');
+  background-size: cover;
+  background-position: center;
+
+}
+
+main .card-bottom .card-bottom-rigth .card-bottom-right-card-two .card-two-bottom .card-two-bottom-teams .card-two-bottom-teams-images .image:nth-last-child(2){
+ position: relative;
+ right: 15px;
+}
+main .card-bottom .card-bottom-rigth .card-bottom-right-card-two .card-two-bottom .card-two-bottom-teams .card-two-bottom-teams-images .image:nth-last-child(3){
+  position: relative;
+  right: 10px;
+}
+
+
+main .card-bottom .card-bottom-rigth .card-bottom-right-card-two .card-two-bottom .card-two-bottom-teams .card-two-bottom-teams-images .plus{
+  content: '';
+  height: 40px;
+  width: 40px;
+  font-size: 1rem;
+  background-color: white;
+  border: 1px solid #100f0b;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  right: 20px;
+}
+
+main .card-bottom .card-bottom-rigth .card-bottom-right-card-two .card-two-bottom .card-two-bottom-teams .card-two-bottom-teams-text{
+  color: #100f0b;
+  font-size: 0.9rem;
+  /* border: 1px solid; */
 }
 
 .layout {

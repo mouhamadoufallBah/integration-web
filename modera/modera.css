@@ -96,7 +96,7 @@ header nav .cta .cta-icon {
 main {
   /* height: 90%; */
   border-radius: 16px;
-  background-image: url("https://cdn.pixabay.com/photo/2016/08/26/15/06/home-1622401_1280.jpg");
+  background-image: url("https://cdn.pixabay.com/photo/2016/01/23/21/58/new-1158139_1280.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -134,8 +134,8 @@ main .card-top .card-top-one::before {
   width: 15px;
   background-color: transparent;
   position: absolute;
-  left: 2.96rem;
-  top: 46%;
+  left: 2.90rem;
+  top: 45.8%;
   border-radius: 50%;
   box-shadow: -3px -3px #100f0b;
 }
@@ -188,6 +188,7 @@ main .card-top .card-top-two img {
 main p {
   text-align: center;
   color: rgb(255, 255, 255);
+  font-size: 6.5rem;
 }
 
 main .card-bottom {
@@ -260,8 +261,9 @@ main
   .card-bottom-left-card
   .card-bottom-left-card-image {
   height: 95%;
-  background-image: url("https://cdn.pixabay.com/photo/2016/08/26/15/06/home-1622401_1280.jpg");
+  background-image: url("https://cdn.pixabay.com/photo/2023/09/18/12/02/dining-area-8260415_1280.jpg");
   background-size: cover;
+  background-position: center;
   border-radius: 8px;
 }
 
